@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8f4e9">
+
+<title>Алмаз & Анел | 16.11.2026</title>
+
+<meta name="description"
+content="Алмаз жана Анелдин үйлөнүү тоюна чакыруу. 16-ноябрь, 2026-жыл. Бишкек шаары, Anel Grand Hall.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap"
+rel="stylesheet">
+
+<style>
+:root {
+    --cream: #f8f4e9;
+    --paper: #fffdf7;
+    --green: #526b54;
+    --dark: #303b35;
+    --gold: #b69a5d;
+    --text: #454840;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+}
+
+button {
+    font: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+section {
+    position: relative;
+    padding: 75px 22px;
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: auto;
+}
+
+.eyebrow {
+    font-size: 10px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 20px;
+}
+
+.script-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(42px, 10vw, 66px);
+    line-height: 1.1;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(34px, 8vw, 48px);
+    margin-bottom: 22px;
+}
+
+.body-text {
+    font-size: 13px;
+    line-height: 2;
+    color: #66675f;
+}
+
+.divider {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 28px auto;
+}
+
+.photo {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.photo-frame {
+    padding: 8px;
+    border: 1px solid rgba(182,154,93,.5);
+}
+
+/* LANGUAGE AND MUSIC */
+
+.top-controls {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-btn,
+.music-btn {
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    border: 1px solid #d7cfba;
+    background: rgba(255,253,247,.9);
+    color: var(--dark);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    font-size: 11px;
+    transition: .3s;
+}
+
+.lang-btn.active {
+    border-color: var(--green);
+    color: var(--green);
+    border-width: 2px;
+}
+
+.music-btn {
+    font-size: 18px;
+}
+
+/* COVER */
+
+.cover {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 90px 24px 50px;
+    background:
+        radial-gradient(ellipse at top, #fffdf7 0%, transparent 65%),
+        var(--cream);
+    overflow: hidden;
+}
+
+.cover::before,
+.cover::after {
+    content: "❀";
+    position: absolute;
+    font-size: 120px;
+    color: #70856b;
+    opacity: .18;
+    pointer-events: none;
+}
+
+.cover::before {
+    top: -25px;
+    left: -30px;
+    transform: rotate(-25deg);
+}
+
+.cover::after {
+    bottom: -25px;
+    right: -30px;
+    transform: rotate(25deg);
+}
+
+.cover-art {
+    width: min(100%, 410px);
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 32px;
+    mix-blend-mode: multiply;
+    border-radius: 5px;
+}
+
+.cover-date {
+    font-size: 12px;
+    letter-spacing: 7px;
+    margin-top: 22px;
+    color: #77796e;
+}
+
+.scroll-button {
+    margin-top: 36px;
+    border: 0;
+    background: transparent;
+    color: var(--green);
+    font-size: 28px;
+    cursor: pointer;
+    animation: bob 2s infinite;
+}
+
+@keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* ENVELOPE */
+
+.envelope-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+    transition: opacity .8s, visibility .8s;
+}
+
+.envelope-screen.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.envelope-inner {
+    width: 100%;
+    max-width: 390px;
+}
+
+.envelope-illustration {
+    position: relative;
+    height: 210px;
+    margin: 30px auto;
+    width: 280px;
+    max-width: 100%;
+}
+
+.envelope-back {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    height: 155px;
+    background: #e9dfc8;
+    border: 1px solid #c9b991;
+    border-radius: 4px;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: #d8c9a9;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.envelope-letter {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 15%;
+    width: 70%;
+    height: 105px;
+    background: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    font-style: italic;
+    color: var(--green);
+}
+
+.envelope-heart {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
+    color: #a9544d;
+    font-size: 29px;
+}
+
+.open-button {
+    margin-top: 25px;
+    padding: 15px 27px;
+    border: 1px solid var(--green);
+    background: var(--green);
+    color: white;
+    letter-spacing: 2px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.open-button:hover {
+    background: transparent;
+    color: var(--green);
+}
+
+/* INTRODUCTION */
+
+.intro {
+    text-align: center;
+    background: var(--paper);
+}
+
+.intro-copy {
+    max-width: 520px;
+    margin: auto;
+}
+
+.intro-heading {
+    font-size: 12px;
+    line-height: 2.1;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.intro-message {
+    margin-top: 22px;
+    font-size: 13px;
+    line-height: 2.1;
+}
+
+/* COUNTDOWN */
+
+.countdown-section {
+    text-align: center;
+    background: #edf0e6;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 32px;
+}
+
+.countdown-item {
+    min-width: 65px;
+    padding: 15px 7px;
+    border: 1px solid rgba(82,107,84,.35);
+    background: rgba(255,255,255,.35);
+}
+
+.countdown-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 34px;
+    color: var(--green);
+}
+
+.countdown-label {
+    font-size: 9px;
+    margin-top: 6px;
+    letter-spacing: 1px;
+}
+
+/* CALENDAR */
+
+.calendar-section {
+    text-align: center;
+    background: var(--paper);
+}
+
+.calendar {
+    max-width: 350px;
+    margin: 30px auto 0;
+    border: 1px solid #e2d8c1;
+    padding: 25px 18px;
+    background: #fffdf8;
+}
+
+.calendar-month {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    margin-bottom: 22px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px 3px;
+    font-size: 12px;
+}
+
+.calendar-grid span {
+    display: grid;
+    place-items: center;
+    min-height: 32px;
+}
+
+.calendar-grid .weekday {
+    color: var(--green);
+    font-size: 10px;
+}
+
+.calendar-grid .wedding-day {
+    background: var(--green);
+    color: white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.calendar-grid .wedding-day::after {
+    content: "♥";
+    position: absolute;
+    bottom: -12px;
+    font-size: 9px;
+    color: #b45c50;
+}
+
+/* SCHEDULE */
+
+.schedule-section {
+    background: var(--cream);
+    text-align: center;
+}
+
+.timeline {
+    max-width: 440px;
+    margin: 42px auto 0;
+    position: relative;
+    text-align: left;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 29px;
+    width: 1px;
+    background: #b5bda9;
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 18px;
+    position: relative;
+    margin-bottom: 32px;
+    align-items: start;
+}
+
+.timeline-icon {
+    width: 59px;
+    height: 59px;
+    background: #edf0e6;
+    border: 1px solid #c7d0bf;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    z-index: 1;
+}
+
+.timeline-time {
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin: 4px 0 7px;
+}
+
+.timeline-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.timeline-description {
+    font-size: 11px;
+    line-height: 1.8;
+    color: #77796e;
+}
+
+/* RESTAURANT */
+
+.restaurant-section {
+    background: var(--paper);
+    text-align: center;
+}
+
+.restaurant-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 25px;
+}
+
+.address {
+    margin: 18px 0;
+    line-height: 2;
+    font-size: 13px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 14px 22px;
+    border: 1px solid var(--green);
+    color: var(--green);
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+.map-button:hover {
+    background: var(--green);
+    color: white;
+}
+
+/* GALLERY */
+
+.gallery-section {
+    text-align: center;
+    background: var(--cream);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+}
+
+/* FINAL */
+
+.final-section {
+    min-height: 75svh;
+    background: #edf0e6;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.final-photo {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.final-date {
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.final-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--green);
+}
+
+footer {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity .8s ease, transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+    section {
+        padding: 60px 20px;
+    }
+
+    .cover-art {
+        height: 230px;
+    }
+
+    .countdown {
+        gap: 6px;
+    }
+
+    .countdown-item {
+        min-width: 0;
+        flex: 1;
+        padding: 12px 4px;
+    }
+
+    .countdown-number {
+        font-size: 28px;
+    }
+
+    .countdown-label {
+        font-size: 8px;
+        letter-spacing: 0;
+    }
+
+    .restaurant-photo {
+        height: 240px;
+    }
+
+    .gallery img {
+        height: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ENVELOPE SCREEN -->
+
+<div class="envelope-screen" id="envelopeScreen">
+    <div class="envelope-inner">
+
+        <p class="eyebrow" data-ky="ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРУУ"
+           data-ru="ПРИГЛАШЕНИЕ НА СВАДЬБУ">
+           ҮЙЛӨНҮҮ ТОЮНА ЧАКЫРУУ
+        </p>
+
+        <div class="envelope-illustration">
+            <div class="envelope-back"></div>
+
+            <div class="envelope-letter">
+                Алмаз & Анел
+            </div>
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-heart">♥</div>
+        </div>
+
+        <h1 class="section-title"
+            data-ky="Сизге чакыруу"
+            data-ru="Приглашение для вас">
+            Сизге чакыруу
+        </h1>
+
+        <p class="body-text"
+           data-ky="Биздин өзгөчө күнүбүздүн кадырлуу коногу болуңуз."
+           data-ru="Станьте дорогим гостем нашего особенного дня.">
+           Биздин өзгөчө күнүбүздүн кадырлуу коногу болуңуз.
+        </p>
+
+        <button class="open-button" id="openInvitation"
+            data-ky="ЧАКЫРУУНУ АЧУУ ♥"
+            data-ru="ОТКРЫТЬ ПРИГЛАШЕНИЕ ♥">
+            ЧАКЫРУУНУ АЧУУ ♥
+        </button>
+
+    </div>
+</div>
+
+<!-- MUSIC -->
+
+<audio id="weddingMusic" loop preload="none">
+    <source src="assets/wedding-music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MAIN COVER -->
+
+<section class="cover" id="home">
+
+    <div class="top-controls">
+
+        <div class="languages">
+            <button class="lang-btn" data-language="ru">RU</button>
+            <button class="lang-btn active" data-language="ky">KG</button>
+        </div>
+
+        <button class="music-btn" id="musicButton"
+            aria-label="Музыканы күйгүзүү же өчүрүү">♫</button>
+
+    </div>
+
+    <img class="cover-art"
+         src="assets/cover-hands.jpg"
+         alt="Алмаз менен Анелдин үйлөнүү тоюна чакыруу">
+
+    <p class="eyebrow"
+       data-ky="БИЗДИН ҮЙЛӨНҮҮ ТОЮБУЗ"
+       data-ru="НАША СВАДЬБА">
+       БИЗДИН ҮЙЛӨНҮҮ ТОЮБУЗ
+    </p>
+
+    <h1 class="script-title">
+        Алмаз <span class="gold">&</span> Анел
+    </h1>
+
+    <p class="cover-date">16 · 11 · 2026</p>
+
+    <button class="scroll-button" id="scrollDown"
+        aria-label="Төмөн жылдыруу">⌄</button>
+
+</section>
+
+<!-- INVITATION TEXT -->
+
+<section class="intro" id="invitation">
+
+    <div class="container intro-copy reveal">
+
+        <p class="eyebrow"
+           data-ky="КЫМБАТТУУ КОНУГУБУЗ!"
+           data-ru="ДОРОГОЙ ГОСТЬ!">
+           КЫМБАТТУУ КОНУГУБУЗ!
+        </p>
+
+        <h2 class="section-title"
+            data-ky="Биздин эң кооз күнүбүз"
+            data-ru="Самый прекрасный день нашей жизни">
+            Биздин эң кооз күнүбүз
+        </h2>
+
+        <div class="divider"></div>
+
+        <p class="intro-heading"
+           data-ky="БИЗДИН ӨМҮРҮБҮЗДӨГҮ ЭҢ КООЗ КҮНҮБҮЗГӨ СИЗДЕРДИ ЧЫН ЖҮРӨКТӨН ЧАКЫРАБЫЗ!"
+           data-ru="ОТ ВСЕГО СЕРДЦА ПРИГЛАШАЕМ ВАС НА САМЫЙ ПРЕКРАСНЫЙ ДЕНЬ НАШЕЙ ЖИЗНИ!">
+           БИЗДИН ӨМҮРҮБҮЗДӨГҮ ЭҢ КООЗ КҮНҮБҮЗГӨ СИЗДЕРДИ ЧЫН ЖҮРӨКТӨН ЧАКЫРАБЫЗ!
+        </p>
+
+        <p class="intro-message"
+           data-ky="Бул өзгөчө күнүбүздө сиздер менен бирге болуу — биз үчүн чоң бакыт. Сиздерди сүйүү, жылуулук жана кубаныч толгон кечки майрамыбызда күтөбүз!"
+           data-ru="Разделить этот особенный день с вами — большое счастье для нас. Будем рады видеть вас на нашем вечере, наполненном любовью, теплом и радостью!">
+           Бул өзгөчө күнүбүздө сиздер менен бирге болуу — биз үчүн чоң бакыт.
+           Сиздерди сүйүү, жылуулук жана кубаныч толгон кечки майрамыбызда күтөбүз!
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="body-text"
+           data-ky="16-ноябрь, 2026-жыл · Саат 16:00"
+           data-ru="16 ноября 2026 года · 16:00">
+           16-ноябрь, 2026-жыл · Саат 16:00
+        </p>
+
+    </div>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="countdown-section">
+
+    <div class="container reveal">
+
+        <p class="eyebrow"
+           data-ky="БАКТЫЛУУ КҮНГӨ ЧЕЙИН"
+           data-ru="ДО НАШЕГО СЧАСТЛИВОГО ДНЯ">
+           БАКТЫЛУУ КҮНГӨ ЧЕЙИН
+        </p>
+
+        <h2 class="section-title"
+            data-ky="Биздин өзгөчө күн"
+            data-ru="Наш особенный день">
+            Биздин өзгөчө күн
+        </h2>
+
+        <div class="countdown" aria-live="off">
+
+            <div class="countdown-item">
+                <div class="countdown-number" id="days">00</div>
+                <div class="countdown-label"
+                     data-ky="КҮН"
+                     data-ru="ДНЕЙ">КҮН</div>
+            </div>
+
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label"
+                     data-ky="СААТ"
+                     data-ru="ЧАСОВ">СААТ</div>
+            </div>
+
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label"
+                     data-ky="МҮНӨТ"
+                     data-ru="МИНУТ">МҮНӨТ</div>
+            </div>
+
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label"
+                     data-ky="СЕКУНД"
+                     data-ru="СЕКУНД">СЕКУНД</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CALENDAR -->
+
+<section class="calendar-section">
+
+    <div class="container reveal">
+
+        <p class="eyebrow"
+           data-ky="КҮНДҮ БЕЛГИЛЕП КОЮҢУЗ"
+           data-ru="ОТМЕТЬТЕ ЭТУ ДАТУ">
+           КҮНДҮ БЕЛГИЛЕП КОЮҢУЗ
+        </p>
+
+        <h2 class="section-title"
+            data-ky="Той күнүбүз"
+            data-ru="День нашей свадьбы">
+            Той күнүбүз
+        </h2>
+
+        <div class="calendar">
+
+            <div class="calendar-month"
+                 data-ky="Ноябрь 2026"
+                 data-ru="Ноябрь 2026">
+                 Ноябрь 2026
+            </div>
+
+            <div class="calendar-grid" id="calendarGrid"></div>
+
+        </div>
+
+        <p class="body-text" style="margin-top:25px">
+            16.11.2026 · 16:00
+        </p>
+
+    </div>
+
+</section>
+
+<!-- SCHEDULE -->
+
+<section class="schedule-section">
+
+    <div class="container reveal">
+
+        <p class="eyebrow"
+           data-ky="БИЗДИН ПЛАНЫБЫЗ"
+           data-ru="ПЛАН НАШЕГО ПРАЗДНИКА">
+           БИЗДИН ПЛАНЫБЫЗ
+        </p>
+
+        <h2 class="section-title"
+            data-ky="Тойдун программасы"
+            data-ru="Программа торжества">
+            Тойдун программасы
+        </h2>
+
+        <p class="body-text"
+           data-ky="Бул күндү сиздер менен бирге өткөрүүнү чыдамсыздык менен күтөбүз."
+           data-ru="С нетерпением ждём возможности разделить этот день с вами.">
+           Бул күндү сиздер менен бирге өткөрүүнү чыдамсыздык менен күтөбүз.
+        </p>
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-icon">🚘</div>
+                <div>
+                    <p class="timeline-time">15:00</p>
+                    <h3 class="timeline-title"
+                        data-ky="Коноктордун келиши"
+                        data-ru="Сбор гостей">
+                        Коноктордун келиши
+                    </h3>
+                    <p class="timeline-description"
+                       data-ky="Конокторду жылуу тосуп алуу."
+                       data-ru="Тёплая встреча гостей.">
+                       Конокторду жылуу тосуп алуу.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">🤍</div>
+                <div>
+                    <p class="timeline-time">16:00</p>
+                    <h3 class="timeline-title"
+                        data-ky="Нике аземи"
+                        data-ru="Церемония никаха">
+                        Нике аземи
+                    </h3>
+                    <p class="timeline-description"
+                       data-ky="Жаңы үй-бүлөнүн башталышы."
+                       data-ru="Начало нашей семейной истории.">
+                       Жаңы үй-бүлөнүн башталышы.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">💍</div>
+                <div>
+                    <p class="timeline-time">17:00</p>
+                    <h3 class="timeline-title"
+                        data-ky="Тойдун башталышы"
+                        data-ru="Начало банкета">
+                        Тойдун башталышы
+                    </h3>
+                    <p class="timeline-description"
+                       data-ky="Кубанычтуу көз ирмемдер жана куттуктоолор."
+                       data-ru="Радостные моменты и поздравления.">
+                       Кубанычтуу көз ирмемдер жана куттуктоолор.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">🍽️</div>
+                <div>
+                    <p class="timeline-time">19:00</p>
+                    <h3 class="timeline-title"
+                        data-ky="Майрамдык дасторкон"
+                        data-ru="Праздничный ужин">
+                        Майрамдык дасторкон
+                    </h3>
+                    <p class="timeline-description"
+                       data-ky="Даамдуу тамактар жана жагымдуу баарлашуу."
+                       data-ru="Вкусные угощения и приятное общение.">
+                       Даамдуу тамактар жана жагымдуу баарлашуу.
+                    </p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-icon">🎂</div>
+                <div>
+                    <p class="timeline-time">21:00</p>
+                    <h3 class="timeline-title"
+                        data-ky="Торт жана майрам"
+                        data-ru="Торт и праздничный вечер">
+                        Торт жана майрам
+                    </h3>
+                    <p class="timeline-description"
+                       data-ky="Кеченин таттуу жана унутулгус көз ирмеми."
+                       data-ru="Сладкий и незабываемый момент вечера.">
+                       Кеченин таттуу жана унутулгус көз ирмеми.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RESTAURANT -->
+
+<section class="restaurant-section">
+
+    <div class="container reveal">
+
+        <p class="eyebrow"
+           data-ky="ТОЙ ӨТҮҮЧҮ ЖАЙ"
+           data-ru="МЕСТО ПРОВЕДЕНИЯ">
+           ТОЙ ӨТҮҮЧҮ ЖАЙ
+        </p>
+
+        <h2 class="section-title"
+            data-ky="Сиздерди күтөбүз"
+            data-ru="Будем ждать вас">
+            Сиздерди күтөбүз
+        </h2>
+
+        <div class="photo-frame">
+            <img class="restaurant-photo photo"
+                 src="assets/restaurant-interior.jpg"
+                 alt="Anel Grand Hall ресторанынын ичи"
+                 loading="lazy">
+        </div>
+
+        <h3 class="section-title" style="margin-top:28px">
+            Anel Grand Hall
+        </h3>
+
+        <p class="address"
+           data-ky="Бишкек шаары,<br>Курманжан Датка көчөсү, 267"
+           data-ru="город Бишкек,<br>улица Курманжан Датка, 267">
+           Бишкек шаары,<br>Курманжан Датка көчөсү, 267
+        </p>
+
+        <a class="map-button"
+           href="https://www.google.com/maps/search/?api=1&query=Anel+Grand+Hall+Bishkek+Kurmanjan+Datka+267"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-ky="КАРТАДАН КӨРҮҮ ↗"
+           data-ru="ПОСМОТРЕТЬ НА КАРТЕ ↗">
+           КАРТАДАН КӨРҮҮ ↗
+        </a>
+
+    </div>
+
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section class="gallery-section">
+
+    <div class="container reveal">
+
+        <p class="eyebrow"
+           data-ky="МАЙРАМДЫН КӨРКҮ"
+           data-ru="АТМОСФЕРА ПРАЗДНИКА">
+           МАЙРАМДЫН КӨРКҮ
+        </p>
+
+        <h2 class="section-title"
+            data-ky="Биздин майрам"
+            data-ru="Наш праздник">
+            Биздин майрам
+        </h2>
+
+        <p class="body-text"
+           data-ky="Сүйүү жана кооз көз ирмемдер."
+           data-ru="Любовь и прекрасные моменты.">
+           Сүйүү жана кооз көз ирмемдер.
+        </p>
+
+        <div class="gallery">
+
+            <div class="photo-frame">
+                <img src="assets/ceremony-arch.jpg"
+                     alt="Нике аземинин гүлдөр менен кооздолгон аркасы"
+                     loading="lazy">
+            </div>
+
+            <div class="photo-frame">
+                <img src="assets/wedding-cake.jpg"
+                     alt="Үйлөнүү тоюнун ак торту"
+                     loading="lazy">
+            </div>
+
+            <div class="photo-frame">
+                <img src="assets/watercolor-couple.jpg"
+                     alt="Алмаз жана Анел үчүн кооз иллюстрация"
+                     loading="lazy">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FINAL MESSAGE -->
+
+<section class="final-section">
+
+    <div class="container reveal">
+
+        <img class="final-photo"
+             src="assets/watercolor-couple.jpg"
+             alt="Алмаз жана Анел"
+             loading="lazy">
+
+        <p class="eyebrow"
+           data-ky="СҮЙҮҮ МЕНЕН"
+           data-ru="С ЛЮБОВЬЮ">
+           СҮЙҮҮ МЕНЕН
+        </p>
+
+        <h2 class="script-title">
+            Алмаз <span class="gold">&</span> Анел
+        </h2>
+
+        <p class="final-date">16 · 11 · 2026</p>
+
+        <div class="divider"></div>
+
+        <p class="final-message"
+           data-ky="Сүйүнүч менен күтөбүз!"
+           data-ru="С радостью будем ждать вас!">
+           Сүйүнүч менен күтөбүз!
+        </p>
+
+        <p class="body-text" style="margin-top:22px"
+           data-ky="Бул өзгөчө күнүбүздү биз менен бөлүшкөнүңүздөр үчүн рахмат."
+           data-ru="Спасибо, что разделите этот особенный день с нами.">
+           Бул өзгөчө күнүбүздү биз менен бөлүшкөнүңүздөр үчүн рахмат.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    ALMAZ & ANEL · 16.11.2026
+</footer>
+
+<script>
+"use strict";
+
+/* ======================================
+   ТОЙДУН ДАТАСЫ ЖАНА УБАКТЫСЫ
+   Бишкек убактысы: UTC+6
+====================================== */
+
+const WEDDING_DATE = new Date("2026-11-16T16:00:00+06:00");
+
+/* ======================================
+   КОНВЕРТТИ АЧУУ ЖАНА МУЗЫКА
+====================================== */
+
+const envelopeScreen = document.getElementById("envelopeScreen");
+const openButton = document.getElementById("openInvitation");
+const weddingMusic = document.getElementById("weddingMusic");
+const musicButton = document.getElementById("musicButton");
+
+let musicIsPlaying = false;
+
+openButton.addEventListener("click", async function () {
+    envelopeScreen.classList.add("hidden");
+
+    try {
+        weddingMusic.volume = 0.5;
+        await weddingMusic.play();
+        musicIsPlaying = true;
+        musicButton.textContent = "♫";
+    } catch (error) {
+        musicIsPlaying = false;
+        musicButton.textContent = "♪";
+        console.log("Музыка ойнотулган жок. Музыка баскычын басып көрүңүз.");
+    }
+
+    setTimeout(function () {
+        document.getElementById("invitation").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 350);
+});
+
+musicButton.addEventListener("click", async function () {
+    if (musicIsPlaying) {
+        weddingMusic.pause();
+        musicIsPlaying = false;
+        musicButton.textContent = "♪";
+    } else {
+        try {
+            await weddingMusic.play();
+            musicIsPlaying = true;
+            musicButton.textContent = "♫";
+        } catch (error) {
+            console.log("Музыканы ойнотуу мүмкүн болгон жок.");
+        }
+    }
+});
+
+weddingMusic.addEventListener("pause", function () {
+    musicIsPlaying = false;
+    musicButton.textContent = "♪";
+});
+
+weddingMusic.addEventListener("play", function () {
+    musicIsPlaying = true;
+    musicButton.textContent = "♫";
+});
+
+/* ======================================
+   ТИЛДИ АЛМАШТЫРУУ: KG / RU
+====================================== */
+
+function setLanguage(language) {
+    document.documentElement.lang = language;
+
+    document.querySelectorAll("[data-ky][data-ru]").forEach(function (element) {
+        const value = element.getAttribute("data-" + language);
+
+        if (value !== null) {
+            element.innerHTML = value;
+        }
+    });
+
+    document.querySelectorAll(".lang-btn").forEach(function (button) {
+        button.classList.toggle(
+            "active",
+            button.dataset.language === language
+        );
+    });
+
+    try {
+        localStorage.setItem("wedding-language", language);
+    } catch (error) {
+        // localStorage жеткиликсиз болсо, сайт иштей берет.
+    }
+}
+
+document.querySelectorAll(".lang-btn").forEach(function (button) {
+    button.addEventListener("click", function () {
+        setLanguage(button.dataset.language);
+    });
+});
+
+try {
+    const savedLanguage = localStorage.getItem("wedding-language");
+
+    if (savedLanguage === "ru" || savedLanguage === "ky") {
+        setLanguage(savedLanguage);
+    } else {
+        setLanguage("ky");
+    }
+} catch (error) {
+    setLanguage("ky");
+}
+
+/* ======================================
+   ТОЙГО КАЛГАН УБАКЫТТЫ ЭСЕПТӨӨ
+====================================== */
+
+function updateCountdown() {
+    const now = Date.now();
+    const difference = WEDDING_DATE.getTime() - now;
+
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
+
+    if (difference <= 0) {
+        daysElement.textContent = "00";
+        hoursElement.textContent = "00";
+        minutesElement.textContent = "00";
+        secondsElement.textContent = "00";
+        return;
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor(
+        (difference / (1000 * 60 * 60)) % 24
+    );
+    const minutes = Math.floor(
+        (difference / (1000 * 60)) % 60
+    );
+    const seconds = Math.floor(
+        (difference / 1000) % 60
+    );
+
+    daysElement.textContent = String(days).padStart(2, "0");
+    hoursElement.textContent = String(hours).padStart(2, "0");
+    minutesElement.textContent = String(minutes).padStart(2, "0");
+    secondsElement.textContent = String(seconds).padStart(2, "0");
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+/* ======================================
+   2026-ЖЫЛДЫН НОЯБРЬ КАЛЕНДАРЫ
+   16-НОЯБРЬ — ТОЙ КҮНҮ
+====================================== */
+
+function createCalendar() {
+    const grid = document.getElementById("calendarGrid");
+
+    const weekdays = [
+        { ky: "Дш", ru: "Пн" },
+        { ky: "Шш", ru: "Вт" },
+        { ky: "Шр", ru: "Ср" },
+        { ky: "Бш", ru: "Чт" },
+        { ky: "Жм", ru: "Пт" },
+        { ky: "Иш", ru: "Сб" },
+        { ky: "Жк", ru: "Вс" }
+    ];
+
+    weekdays.forEach(function (day) {
+        const span = document.createElement("span");
+        span.className = "weekday";
+        span.dataset.ky = day.ky;
+        span.dataset.ru = day.ru;
+        span.textContent = day.ky;
+        grid.appendChild(span);
+    });
+
+    // 2026-жылдын ноябрь айы жекшембиде башталат.
+    const firstDay = new Date(2026, 10, 1).getDay();
+    const mondayFirstOffset = (firstDay + 6) % 7;
+    const daysInMonth = new Date(2026, 11, 0).getDate();
+
+    for (let i = 0; i < mondayFirstOffset; i++) {
+        const empty = document.createElement("span");
+        empty.setAttribute("aria-hidden", "true");
+        grid.appendChild(empty);
+    }
+
+    for (let day = 1; day <= daysInMonth; day++) {
+        const span = document.createElement("span");
+        span.textContent = day;
+
+        if (day === 16) {
+            span.className = "wedding-day";
+            span.setAttribute("aria-label", "Той күнү — 16-ноябрь");
+        }
+
+        grid.appendChild(span);
+    }
+}
+
+createCalendar();
+
+/* ======================================
+   ТӨМӨН КАРАЙ ЖЫЛДЫРУУ
+====================================== */
+
+document.getElementById("scrollDown").addEventListener("click", function () {
+    document.getElementById("invitation").scrollIntoView({
+        behavior: "smooth"
+    });
+});
+
+/* ======================================
+   БӨЛҮМДӨРДҮН ЖУМШАК АЧЫЛЫШЫ
+====================================== */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.12
+    });
+
+    revealElements.forEach(function (element) {
+        observer.observe(element);
+    });
+} else {
+    revealElements.forEach(function (element) {
+        element.classList.add("visible");
+    });
+}
+</script>
+
+</body>
+  </html>
